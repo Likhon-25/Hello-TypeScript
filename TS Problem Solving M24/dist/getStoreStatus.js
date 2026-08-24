@@ -13,4 +13,5 @@ const getStockStatus = (stock) => {
     }
     return 'In Stock';
 };
+console.log(getStockStatus(22));
 //# sourceMappingURL=getStoreStatus.js.map
