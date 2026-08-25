@@ -86,7 +86,7 @@ console.log(info); */
 console.log(getTicketPrice(4));*/
 
 // ------------------------------Problem 2 ----------------------
-const getStockStatus = (stock : number) : string =>{
+/*const getStockStatus = (stock : number) : string =>{
   if(stock === 0){
     return "Out of Stock"
   } else if (stock >= 1 && stock <= 5){
@@ -97,4 +97,24 @@ const getStockStatus = (stock : number) : string =>{
     return "In Stock"
   }
 }
-console.log(getStockStatus(21));
+console.log(getStockStatus(21));*/
+
+// ------------------------------Problem 3 ----------------------
+/*interface User {
+  name: string;
+  age: number;
+  city: string;
+}
+const formatUserProfile = (user: User): string => {
+  const returnUserInfo = `${user.name} is ${user.age} years old and lives in ${user.city}.`;
+
+  return returnUserInfo
+};
+
+let userInfo = formatUserProfile({
+  name: "Fahim",
+  age: 22,
+  city: "Dhaka",
+});
+
+console.log(userInfo);*/
