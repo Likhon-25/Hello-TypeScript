@@ -23,11 +23,18 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const getStudentResult = (student) => {
     const marks = student.mark;
     const totalMaks = marks.reduce((sum, mark) => sum + mark, 0);
-    return totalMaks;
+    const averate = totalMaks / marks.length;
+    const result = averate >= 40 ? "Passed" : "Failed";
+    const finalResult = {
+        name: student.name,
+        average: averate,
+        result: result,
+    };
+    return result;
 };
 let info = getStudentResult({
     name: "Rafi",
-    mark: [80, 75, 90, 85],
+    mark: [20, 25, 90, 85],
 });
 console.log(info);
 //# sourceMappingURL=practice.js.map
