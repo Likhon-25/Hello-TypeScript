@@ -68,20 +68,34 @@ let info = getStudentResult({
   mark: [20, 25, 90, 85],
 });
 console.log(info); */
-// ------------------------------
-const getTicketPrice = (age) => {
-    if (age > 5) {
-        return 0;
+// ------------------------------Problem 1 ----------------------
+/*const getTicketPrice = (age: number): number => {
+  if (age > 5) {
+    return 0;
+  } else if (age >= 5 && age <= 12) {
+    return 100;
+  } else if (age >= 13 && age <= 59) {
+    return 200;
+  } else {
+    return 120;
+  }
+};
+
+console.log(getTicketPrice(4));*/
+// ------------------------------Problem 2 ----------------------
+const getStockStatus = (stock) => {
+    if (stock === 0) {
+        return "Out of Stock";
     }
-    else if (age >= 5 && age <= 12) {
-        return 100;
+    else if (stock >= 1 && stock <= 5) {
+        return "Almost Sold Out";
     }
-    else if (age >= 13 && age <= 59) {
-        return 200;
+    else if (stock >= 6 && stock <= 20) {
+        return "Available";
     }
     else {
-        return 120;
+        return "In Stock";
     }
 };
-console.log(getTicketPrice(5));
+console.log(getStockStatus(21));
 //# sourceMappingURL=practice.js.map

@@ -69,9 +69,9 @@ let info = getStudentResult({
 });
 console.log(info); */
 
-// ------------------------------
+// ------------------------------Problem 1 ----------------------
 
-const getTicketPrice = (age: number): number => {
+/*const getTicketPrice = (age: number): number => {
   if (age > 5) {
     return 0;
   } else if (age >= 5 && age <= 12) {
@@ -83,4 +83,18 @@ const getTicketPrice = (age: number): number => {
   }
 };
 
-console.log(getTicketPrice(4));
+console.log(getTicketPrice(4));*/
+
+// ------------------------------Problem 2 ----------------------
+const getStockStatus = (stock : number) : string =>{
+  if(stock === 0){
+    return "Out of Stock"
+  } else if (stock >= 1 && stock <= 5){
+    return "Almost Sold Out"
+  } else if(stock >= 6 && stock <= 20){
+    return "Available"
+  } else{
+    return "In Stock"
+  }
+}
+console.log(getStockStatus(21));
