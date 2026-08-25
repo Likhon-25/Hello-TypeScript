@@ -15,4 +15,16 @@ const getPatientStatus = (patient) => {
     return "Moderate emergency";
 };
 console.log(getPatientStatus({ name: "Rahim", age: 35, type: "general" }));
+console.log(getPatientStatus({
+    name: "Karim",
+    age: 60,
+    type: "emergency",
+    emergencyLevel: 1,
+}));
+console.log(getPatientStatus({
+    name: "Hasan",
+    age: 45,
+    type: "emergency",
+    emergencyLevel: 3,
+}));
 //# sourceMappingURL=getPatientStatus.js.map

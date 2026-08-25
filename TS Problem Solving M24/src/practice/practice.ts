@@ -34,6 +34,8 @@ console.log(formatUserProfile({
     age: 20,
     city: "Rangpur"
 }));*/
+
+/*
 interface Student {
   name: string;
   mark: number[];
@@ -65,4 +67,20 @@ let info = getStudentResult({
   name: "Rafi",
   mark: [20, 25, 90, 85],
 });
-console.log(info);
+console.log(info); */
+
+// ------------------------------
+
+const getTicketPrice = (age: number): number => {
+  if (age > 5) {
+    return 0;
+  } else if (age >= 5 && age <= 12) {
+    return 100;
+  } else if (age >= 13 && age <= 59) {
+    return 200;
+  } else {
+    return 120;
+  }
+};
+
+console.log(getTicketPrice(4));
