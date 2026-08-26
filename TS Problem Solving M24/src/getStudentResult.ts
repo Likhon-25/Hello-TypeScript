@@ -18,7 +18,7 @@ const getStudentResult = (student: Student): Result => {
 
   const result = average >= 40 ? "Passed" : "Faild";
 
-  const r : Result = {
+  const r: Result = {
     name: student.name,
     average: average,
     result: average >= 40 ? "Passed" : "Faild",

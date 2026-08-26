@@ -20,14 +20,21 @@ const products2 = [
 console.log(calculateTotal(products2));
 */
 Object.defineProperty(exports, "__esModule", { value: true });
-const formatUserProfile = (user) => {
-    const returnUserInfo = `${user.name} is ${user.age} years old and lives in ${user.city}.`;
-    return returnUserInfo;
+const getStudentResult = (student) => {
+    const marks = student.marks;
+    const totalMarks = marks.reduce((sum, mark) => sum + mark, 0);
+    const average = totalMarks / marks.length;
+    const result = average >= 40 ? "Passed" : "Faild";
+    const finalResult = {
+        name: student.name,
+        average: average,
+        result: result,
+    };
+    return finalResult;
 };
-let userInfo = formatUserProfile({
-    name: "Fahim",
-    age: 22,
-    city: "Dhaka",
+const studentInfo = getStudentResult({
+    name: "Rafi",
+    marks: [80, 75, 90, 85],
 });
-console.log(userInfo);
+console.log(studentInfo);
 //# sourceMappingURL=practice.js.map

@@ -118,3 +118,60 @@ let userInfo = formatUserProfile({
 });
 
 console.log(userInfo);*/
+
+// ------------------------------Problem 4 ----------------------
+/*
+type Product = {
+  name: string;
+  price: number;
+};
+const calculateCartTotal = (products: Product[]) => {
+  const total = products.reduce((sum, item) => sum + item.price, 0);
+  return total;
+};
+
+const products = [
+  { name: "Keyboard", price: 1500 },
+  { name: "Mouse", price: 800 },
+  { name: "USB Cable", price: 700 },
+];
+
+console.log(calculateCartTotal(products)); */
+
+// ------------------------------Problem 5 ----------------------
+
+interface Students {
+  name: string;
+  marks: number[];
+}
+
+interface Result {
+  name: string;
+  average: number;
+  result: "Passed" | "Faild";
+}
+
+const getStudentResult = (student: Students): Result => {
+  const marks: number[] = student.marks;
+
+  const totalMarks: number = marks.reduce((sum, mark) => sum + mark, 0);
+
+  const average: number = totalMarks / marks.length;
+
+  const result = average >= 40 ? "Passed" : "Faild";
+
+  const finalResult: Result = {
+    name: student.name,
+    average: average,
+    result: result,
+  };
+
+  return finalResult;
+};
+
+const studentInfo = getStudentResult({
+  name: "Rafi",
+  marks: [80, 75, 90, 85],
+});
+
+console.log(studentInfo);
